@@ -139,7 +139,8 @@ dmypy.json
 *.venom-X399-AORUS-XTREME
 .idea/
 *.DS_Store
-#*.pth.tar
+*.pth.tar
 logs/
 models/
 *.zip
+*.db

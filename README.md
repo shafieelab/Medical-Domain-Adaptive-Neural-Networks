@@ -65,4 +65,4 @@ Please cite our paper if you use our code in your research:
 }
 ```
 ## Contact
-If you have any questions, please contact us via hshafiee@bwh.harvard.edu.
+If you have any questions, please contact us via hshafiee[at]bwh.harvard.edu.
