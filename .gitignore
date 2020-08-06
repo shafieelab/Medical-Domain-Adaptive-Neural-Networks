@@ -127,3 +127,19 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+
+
+*.png
+*.jpg
+*.jpeg
+*.pth
+*.png
+*.venom-X399-AORUS-XTREME
+.idea/
+*.DS_Store
+#*.pth.tar
+logs/
+models/
+*.zip
