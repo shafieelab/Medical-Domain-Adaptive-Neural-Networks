@@ -36,7 +36,7 @@ python -u experiments/tools/train_md_nets.py --mode train \
               --gpu_id 1 \
               --arch Xception\  
               --crop_size 224 --image_size 256
-              --target_labelled true \  
+              --target_labelled true  --trade_off 1.0 \  
               --trained_model_path ""
 ```
 ##### For MD-nets (Nos) as follows
