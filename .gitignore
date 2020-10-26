@@ -144,3 +144,8 @@ logs/
 models/
 *.zip
 *.db
+experiments/scripts/test_sperm_now.sh
+experiments/submitted_models/
+/experiments/logs/
+/experiments/tools/experiments/
+/experiments/submitted_models.zip

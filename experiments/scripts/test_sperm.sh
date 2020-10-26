@@ -3,7 +3,7 @@ seed=0
 # SD4 to SD3, SD2 and SD4 adaption
 printf "sd4 to sd4 slides \n \n"
 
-python -u experiments/tools/train_md_nets.py --mode test \
+python -u experiments/python_scripts/train_md_nets.py --mode test \
               --seed $seed --dset sperm --s_dset sd4 --t_dset sd4_slides \
               --s_dset_txt "data/sperm/sd4/sd4_source.txt" --sv_dset_txt "data/sperm/sd4/sd4_validation.txt" \
               --t_dset_txt "data/sperm/sd4/sd4_patient_target.txt" \
@@ -17,7 +17,7 @@ printf "DONE \n \n \n "
 
 printf "sd4 to sd3 slides \n \n"
 
-python -u experiments/tools/train_md_nets.py --mode test \
+python -u experiments/python_scripts/train_md_nets.py --mode test \
               --seed $seed --dset sperm --s_dset sd4 --t_dset sd3_slides \
               --s_dset_txt "data/sperm/sd4/sd4_source.txt" --sv_dset_txt "data/sperm/sd4/sd4_validation.txt" \
               --t_dset_txt "data/sperm/sd3/sd3_patient_target.txt" \
@@ -29,7 +29,7 @@ python -u experiments/tools/train_md_nets.py --mode test \
 printf "DONE \n \n \n "
 printf "sd4 to sd2 slides \n \n"
 
-python -u experiments/tools/train_md_nets.py --mode test \
+python -u experiments/python_scripts/train_md_nets.py --mode test \
               --seed $seed --dset sperm --s_dset sd4 --t_dset sd2_slides \
               --s_dset_txt "data/sperm/sd4/sd4_source.txt" --sv_dset_txt "data/sperm/sd4/sd4_validation.txt" \
               --t_dset_txt "data/sperm/sd2/sd2_patient_target.txt" \
@@ -42,7 +42,7 @@ python -u experiments/tools/train_md_nets.py --mode test \
 printf "DONE \n \n \n "
 printf "sd4 to sd1 slides \n \n"
 
-python -u experiments/tools/train_md_nets.py --mode test \
+python -u experiments/python_scripts/train_md_nets.py --mode test \
               --seed $seed --dset sperm --s_dset sd4 --t_dset sd1_slides \
               --s_dset_txt "data/sperm/sd4/sd4_source.txt" --sv_dset_txt "data/sperm/sd4/sd4_validation.txt" \
               --t_dset_txt "data/sperm/sd1/sd1_patient_target.txt" \
@@ -58,7 +58,7 @@ printf "DONE \n \n \n "
 # SD4 to SD4 adaption
 printf "SD4 to SD4 Labelled \n \n"
 
-python -u experiments/tools/train_md_nets.py --mode test \
+python -u experiments/python_scripts/train_md_nets.py --mode test \
                   --seed $seed --dset sperm  --s_dset sd4 --t_dset sd4 \
                   --s_dset_txt "data/sperm/sd4/same_domain/sd4_source_same_domain.txt" \
                   --sv_dset_txt "data/sperm/sd4/same_domain/sd4_validation_same_domain.txt" \

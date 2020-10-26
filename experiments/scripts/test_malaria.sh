@@ -5,7 +5,7 @@ seed=0
 # MD4 to MD4 adaption
 printf "MD4 CNN model \n \n"
 
-python -u experiments/tools/train_cnn.py --mode test \
+python -u experiments/python_scripts/train_cnn.py --mode test \
                   --seed $seed --num_iterations 10 --patience 5000 --test_interval 50 --snapshot_interval 1000 \
                   --dset malaria  --s_dset MD4 \
                   --s_dset_txt "data/malaria/MD4/txt_70_20_10/MD4_random_train.txt" \
@@ -25,7 +25,7 @@ for target in MD3 MD2 MD1
 do
     printf "MD4 to ${target} \n \n"
 
-    python -u experiments/tools/train_md_nets.py --mode test \
+    python -u experiments/python_scripts/train_md_nets.py --mode test \
                   --seed $seed --num_iterations 10 --patience 5000 --test_interval 50 --snapshot_interval 1000 \
                   --dset malaria --s_dset md4 --t_dset $target \
                   --s_dset_txt "data/malaria/MD4/txt_70_20_10/MD4_random_valid.txt"\
