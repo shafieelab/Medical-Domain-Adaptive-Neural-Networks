@@ -1,6 +1,6 @@
 
 # Medical Domain Adaptive Neural Networks
-This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Networks for Lossy and Domain-ShiftedMedical Image Analysis](http://shafieelab.bwh.harvard.edu). 
+This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Networks for Lossy and Domain-Shifted Medical Image Analysis](http://shafieelab.bwh.harvard.edu). 
 
 ## Requirements
 - Python 3.5
@@ -17,19 +17,20 @@ This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Ne
 ## Dataset
 .txt files are lists for source and target domains 
 
-The Embryo, Malaria, Sperm datasets are available online  [here](https://osf.io/dev35/). Once they are downloaded and extracted into your data directory, create .TXT files with filepaths and nummeric annotation with space delimited.
+The Embryo, Malaria, Sperm and Office datasets are available online  [here](https://osf.io/dev35/). Once they are downloaded and extracted into your data directory, create .TXT files with filepaths and numeric annotation with space delimited.
 
 ## Training
 
-You can run MD-nets as follows
+You can train MD-nets as follows
 ```
 python -u experiments/tools/train_md_nets.py --mode train \  
               --seed $seed 
               --num_iterations 100000 --patience 5000 --test_interval 500 --snapshot_interval 1000 \  
-              --dset embryo --s_dset ed4 --t_dset $target \  
-              --s_dset_txt "data/embryo/ed4/ed4_source.txt" 
-              --sv_dset_txt "data/embryo/ed4/ed4_validation.txt" \  
-              --t_dset_txt "data/embryo/${target}/${target}_target.txt" \  
+              --dset dataset_name --s_dset source_name --t_dset target_name \  
+              --lr "0.0001"  --batch_size 32 --optimizer SGD --use_bottleneck true --batch_size_test 256
+              --s_dset_txt "source_training.txt" 
+              --sv_dset_txt "source_validation.txt" \  
+              --t_dset_txt "target.txt" \  
               --no_of_classes 5 \
               --output_dir "experiments" \
               --gpu_id 1 \
@@ -38,6 +39,24 @@ python -u experiments/tools/train_md_nets.py --mode train \
               --target_labelled true \  
               --trained_model_path ""
 ```
+##### For MD-nets (Nos) as follows
+```
+python -u experiments/tools/train_md_nets_nos.py --mode train \  
+              --seed $seed 
+              --num_iterations 10000 --patience 5000 --test_interval 500 --snapshot_interval 1000 \  
+              --dset embryo --s_dset source_name --t_dset target_name \  
+              --lr "0.0001"  --batch_size 32 --optimizer SGD --use_bottleneck true --batch_size_test 256
+              --tv_dset_txt "target_validation.txt" \  
+              --t_dset_txt "target.txt" \  
+              --no_of_classes 31 \
+              --output_dir "experiments" \
+              --gpu_id 0 \
+              --arch ResNet50\  
+              --crop_size 224 --image_size 256
+              --source_model_path "model.pth.tar"
+              --trade_off_cls 0.3 
+```
+
 
 To run the experiments reported in the paper
 ```
@@ -52,7 +71,7 @@ You can test the datasets on reported models as follows
 ./experiments/scripts/test_DATASETNAME.sh 
 ```
 
-
+<!---
 ## Citing 
 Please cite our paper if you use our code in your research:
 ```
@@ -63,6 +82,7 @@ Please cite our paper if you use our code in your research:
   pages={},
   year={}
 }
+-->
 ```
 ## Contact
 If you have any questions, please contact us via hshafiee[at]bwh.harvard.edu.
