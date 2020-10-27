@@ -17,13 +17,13 @@ This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Ne
 ## Dataset
 .txt files are lists for source and target domains 
 
-The Embryo, Malaria, Sperm and Office datasets are available online  [here](https://osf.io/dev35/). Once they are downloaded and extracted into your data directory, create .TXT files with filepaths and numeric annotation with space delimited.
+The Embryo, Malaria, Sperm  are available online  [here](https://osf.io/dev35/) and Office-31 datasets from [here](https://people.eecs.berkeley.edu/~jhoffman/domainadapt/#datasets_code)  Once they are downloaded and extracted into your data directory, create .TXT files with filepaths and numeric annotation with space delimited.
 
 ## Training
 
 You can train MD-nets as follows
 ```
-python -u experiments/tools/train_md_nets.py --mode train \  
+python -u experiments/python_scripts/train_md_nets.py --mode train \  
               --seed $seed 
               --num_iterations 100000 --patience 5000 --test_interval 500 --snapshot_interval 1000 \  
               --dset dataset_name --s_dset source_name --t_dset target_name \  
@@ -41,7 +41,7 @@ python -u experiments/tools/train_md_nets.py --mode train \
 ```
 ##### For MD-nets (Nos) as follows
 ```
-python -u experiments/tools/train_md_nets_nos.py --mode train \  
+python -u experiments/python_scripts/train_md_nets_nos.py --mode train \  
               --seed $seed 
               --num_iterations 10000 --patience 5000 --test_interval 500 --snapshot_interval 1000 \  
               --dset embryo --s_dset source_name --t_dset target_name \  
@@ -64,7 +64,7 @@ To run the experiments reported in the paper
 ```
 
 The experiment log file and the saved models will be stored at ./experiments/logs/experiment_name/ and ./experiments/models/experiment_name/
-## Test
+## Testing
 
 You can test the datasets on reported models as follows
 ```
