@@ -16,10 +16,10 @@ This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Ne
 
 ## Framework 
 ### MD-nets
-<img src="figures/1.jpg" alt="drawing" width="1429"/>
+<img src="figures/1.jpg" alt="MD-nets" width="1429"/>
 
 ### MD-nets(nos) without source data
-<img src="figures/2.png" alt="drawing" width="1428"/>
+<img src="figures/2.png" alt="MD-nets(nos)" width="1428"/>
 
 ## Dataset
 .txt files are lists for source and target domains 

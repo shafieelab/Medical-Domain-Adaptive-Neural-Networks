@@ -149,3 +149,4 @@ experiments/submitted_models/
 /experiments/logs/
 /experiments/tools/experiments/
 /experiments/submitted_models.zip
+!/figures/
