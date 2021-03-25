@@ -14,6 +14,11 @@ This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Ne
 - NumPy 1.15.2
 - TensorFlow 1.10.0 (For TensorBoard)
 
+## Framework 
+### MD-nets
+
+### MD-nets(nos) without source data
+
 ## Dataset
 .txt files are lists for source and target domains 
 
@@ -82,7 +87,9 @@ Please cite our paper if you use our code in your research:
   pages={},
   year={}
 }
--->
+
 ```
+-->
 ## Contact
+
 If you have any questions, please contact us via hshafiee[at]bwh.harvard.edu.
