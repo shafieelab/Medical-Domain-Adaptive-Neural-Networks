@@ -1,7 +1,7 @@
 
 # MD-nets: Medical Domain Adaptive Neural Networks
 This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Networks for Lossy and Domain-Shifted Medical Image Analysis](http://). 
-Nature Biomedical Engineering
+#### This work will be published in Nature Biomedical Engineering
 
 **TLDR; Adversarial learning can be used to develop high-performing networks trained on unannotated medical images of varying image quality, and to adapt pretrained supervised networks to new domain-shifted datasets.**
 
