@@ -81,7 +81,7 @@ For dataset and imaging system nomenclature, s is graded from 4 through 1, with 
 You can train MD-nets as follows
 ```python
 python -u experiments/python_scripts/train_md_nets.py --mode train \  
-              --seed $seed 
+              --seed seed 
               --num_iterations 100000 --patience 5000 --test_interval 500 --snapshot_interval 1000 \  
               --dset dataset_name --s_dset source_name --t_dset target_name \  
               --lr "0.0001"  --batch_size 32 --optimizer SGD --use_bottleneck true --batch_size_test 256
@@ -120,7 +120,7 @@ To run all the experiments reported in the paper
 ./experiments/scripts/run_DATA_SET_NAME_experiments.sh 
 ```
 
-The experiment log file and the saved models will be stored at ./experiments/logs/EXPERIMENT_NAME/ and ./experiments/models/EXPERIMENT_NAME
+The experiment log file and the saved models will be stored at ```./experiments/logs/EXPERIMENT_NAME/``` and ```./experiments/models/EXPERIMENT_NAME```
 ## Testing
 
 You can test the datasets on reported models as follows
