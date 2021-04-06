@@ -142,6 +142,11 @@ Please cite our paper if you use our code in your research:
 
 ```
 -->
+
+## License  
+
+© Shafiee Lab - This code is made available under the MIT License and is available for non-commercial academic purposes.
+
 ## Contact
 
 If you have any questions, please contact us via hshafiee[at]bwh.harvard.edu.
