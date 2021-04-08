@@ -145,7 +145,7 @@ Please cite our paper if you use our code in your research:
 
 ## License  
 
-© Shafiee Lab - This code is made available under the MIT License and is available for non-commercial academic purposes.
+© Shafiee Lab - This code is made available under the GNU GPLv3 License and is available for non-commercial academic purposes.
 
 ## Contact
 
