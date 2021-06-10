@@ -1,12 +1,12 @@
 
 # MD-nets: Medical Domain Adaptive Neural Networks
-This is the Pytorch implementation for our paper [Adaptive Adversarial Neural Networks for Lossy and Domain-Shifted Medical Image Analysis](http://). 
-#### This work will be published in Nature Biomedical Engineering
+This is the Pytorch implementation for our paper [Adaptive adversarial neural networks for the analysis of lossy and domain-shifted datasets of medical images](https://www.nature.com/articles/s41551-021-00733-w), ***Nature Biomedical Engineering***
 
 **TLDR; Adversarial learning can be used to develop high-performing networks trained on unannotated medical images of varying image quality, and to adapt pretrained supervised networks to new domain-shifted datasets.**
 
 ### Abstract 
-In machine learning for image-based medical diagnostics, supervised convolutional neural networks are typically trained with large and expertly annotated datasets obtained with high-resolution imaging systems. Moreover, the network’s performance can degrade substantially when applied to a dataset with a different distribution. Here we show that adversarial learning can be used to develop high-performing networks trained on unannotated medical images of varying image quality. Specifically, we used low-quality images acquired with inexpensive portable optical systems to train networks for the evaluation of human embryos, the quantification of human-sperm morphology, and the diagnosis of malarial infections in blood, and show that the networks performed well across different data distributions. We also show that adversarial learning can be used with unlabelled data from unseen domain-shifted datasets to adapt pretrained supervised networks to new distributions, even when data from the original distribution are not available. Adaptive adversarial networks may expand the utility of validated neural-network models for the evaluation of data collected from multiple imaging systems of varying quality without compromising the knowledge stored in the network.
+In machine learning for image-based medical diagnostics, supervised convolutional neural networks are typically trained with large and expertly annotated datasets obtained using high-resolution imaging systems. Moreover, the network’s performance can degrade substantially when applied to a dataset with a different distribution. Here, we show that adversarial learning can be used to develop high-performing networks trained on unannotated medical images of varying image quality. Specifically, we used low-quality images acquired using inexpensive portable optical systems to train networks for the evaluation of human embryos, the quantification of human sperm morphology and the diagnosis of malarial infections in the blood, and show that the networks performed well across different data distributions. We also show that adversarial learning can be used with unlabelled data from unseen domain-shifted datasets to adapt pretrained supervised networks to new distributions, even when data from the original distribution are not available. Adaptive adversarial networks may expand the use of validated neural-network models for the evaluation of data collected from multiple imaging systems of varying quality without compromising the knowledge stored in the network.
+
 
 
 ## System Requirements
@@ -128,24 +128,25 @@ You can test the datasets on reported models as follows
 ./experiments/scripts/test_DATASETNAME.sh 
 ```
 
-<!---
-## Citing 
-Please cite our paper if you use our code in your research:
-```
-@inproceedings{,
-  title={},
-  author={},
-  booktitle={},
-  pages={},
-  year={}
-}
 
+## Citing 
+If you find our work useful in your research or if you use parts of this code please consider citing our paper in your research:
 ```
--->
+@article{Kanakasabapathy2021,
+  doi = {10.1038/s41551-021-00733-w},
+  url = {https://doi.org/10.1038/s41551-021-00733-w},
+  year = {2021},
+  month = jun,
+  publisher = {Springer Science and Business Media {LLC}},
+  author = {Manoj Kumar Kanakasabapathy and Prudhvi Thirumalaraju and Hemanth Kandula and Fenil Doshi and Anjali Devi Sivakumar and Deeksha Kartik and Raghav Gupta and Rohan Pooniwala and John A. Branda and Athe M. Tsibris and Daniel R. Kuritzkes and John C. Petrozza and Charles L. Bormann and Hadi Shafiee},
+  title = {Adaptive adversarial neural networks for the analysis of lossy and domain-shifted datasets of medical images},
+  journal = {Nature Biomedical Engineering}
+}
+```
 
 ## License  
 
-© Shafiee Lab - This code is made available under the GNU GPLv3 License and is available for non-commercial academic purposes.
+© [Shafiee Lab](https://shafieelab.bwh.harvard.edu/) - This code is made available under the GNU GPLv3 License and is available for non-commercial academic purposes.
 
 ## Contact
 
