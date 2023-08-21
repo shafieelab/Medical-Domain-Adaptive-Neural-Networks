@@ -36,7 +36,7 @@ In machine learning for image-based medical diagnostics, supervised convolutiona
 ### Download
 .txt files are lists for source and target domains 
 
-The Embryo, Malaria, Sperm  are available online [here]([https://osf.io/dev35/](https://osf.io/3kc2d/)) and Office-31 datasets from [here](https://people.eecs.berkeley.edu/~jhoffman/domainadapt/#datasets_code)  Once they are downloaded and extracted into your data directory, create .TXT files with filepaths and numeric annotation with space delimited.
+The Embryo, Malaria, Sperm  are available online [here](https://osf.io/3kc2d/) and Office-31 datasets from [here](https://people.eecs.berkeley.edu/~jhoffman/domainadapt/#datasets_code)  Once they are downloaded and extracted into your data directory, create .TXT files with filepaths and numeric annotation with space delimited.
 
 The data used for training and testing are suggested to be organized as follows:
 
