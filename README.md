@@ -23,7 +23,6 @@ In machine learning for image-based medical diagnostics, supervised convolutiona
 - opencv-python 4.2.0.34
 - Matplotlib 3.0.0
 - NumPy 1.15.2
-- TensorFlow 1.10.0 (For TensorBoard)
 
 ## Framework 
 ### MD-nets
