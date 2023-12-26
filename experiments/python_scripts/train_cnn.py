@@ -165,7 +165,7 @@ def train(config, dset_loaders):
         if itr % len_train_source == 0:
             iter_source = iter(dset_loaders["source"])
 
-        inputs_source, labels_source,_ = iter_source.next()
+        inputs_source, labels_source,_ = next(iter_source)
         inputs_source, labels_source = inputs_source.cuda(), labels_source.cuda()
 
         features_source, outputs_source = base_network(inputs_source)

@@ -27,7 +27,7 @@ def testing_sperm_slides(loader, model, logs_path, slide_annotation_file_path, n
     with torch.no_grad():
         iter_test = iter(loader["test"])
         for i in range(len(loader['test'])):
-            data = iter_test.next()
+            data = next(iter_test)
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()
@@ -217,7 +217,7 @@ def validation_loss(loader, model, num_classes, logs_path, data_name='valid_sour
     with torch.no_grad():
         iter_test = iter(loader[data_name])
         for i in range(len(loader[data_name])):
-            data = iter_test.next()
+            data = next(iter_test)
             inputs = data[0]
             labels = data[1]
             paths = data[2]
@@ -329,7 +329,7 @@ def obtain_label(loader, model,num_classes):
     with torch.no_grad():
         iter_test = iter(loader)
         for _ in range(len(loader)):
-            data = iter_test.next()
+            data = next(iter_test)
             inputs = data[0]
             labels = data[1]
             inputs = inputs.cuda()

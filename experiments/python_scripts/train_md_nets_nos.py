@@ -200,7 +200,7 @@ def train(config, dset_loaders):
         if itr % len_train_target == 0:
             iter_target = iter(dset_loaders["target"])
 
-        inputs_target, _, idxs = iter_target.next()
+        inputs_target, _, idxs = next(iter_target)
 
         inputs_target = inputs_target.cuda()
 

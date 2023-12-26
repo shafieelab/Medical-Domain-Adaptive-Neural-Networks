@@ -180,8 +180,8 @@ def train(config, dset_loaders):
         if itr % len_train_target == 0:
             iter_target = iter(dset_loaders["target"])
 
-        inputs_source, labels_source,_ = iter_source.next()
-        inputs_target, labels_target,_ = iter_target.next()
+        inputs_source, labels_source,_ = next(iter_source)
+        inputs_target, labels_target,_ = next(iter_target)
         inputs_source, inputs_target, labels_source = inputs_source.cuda(), inputs_target.cuda(), labels_source.cuda()
         features_source, outputs_source = base_network(inputs_source)
         features_target, outputs_target = base_network(inputs_target)
